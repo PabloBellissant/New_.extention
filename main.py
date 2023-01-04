@@ -1,8 +1,9 @@
 from PIL.Image import *
 
 from findIndex import getValue
+from listSimplifier import simplify
 
-i = open("image.jpg")
+i = open("imagebis.jpg")
 (largeur, hauteur)= i.size
 listPixel = []
 for y in range(hauteur):
@@ -15,5 +16,11 @@ dndList = []
 for rgb in range(3):
     for i in range(255):
         listValue = getValue(listPixel, rgb, i)
-        print(i,listValue)
-        dndList.append(listValue)
+        if(listValue != []):
+            dndList.append([rgb, i, listValue])
+for i in range(len(dndList)):
+    dndList[i][2] = simplify(dndList[i][2])
+
+
+
+print(dndList)
