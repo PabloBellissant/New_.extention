@@ -22,4 +22,8 @@ def compacty(list):
         val2 = list[casual]
         val1 = list[casual-1]
         newList[casual] = simpleValue(val1, val2)
+
+    for i in range(len(newList)):
+        list[i] = str(list[i])
+        string = "/".join([str(x) for x in list])
     return newList
