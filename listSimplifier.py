@@ -4,6 +4,8 @@
 
 
 
+
+
 def simplify(list):
     list.append(999999999)
     newList = []
