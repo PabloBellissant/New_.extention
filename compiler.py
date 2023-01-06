@@ -18,7 +18,7 @@ def Imagecompiler(i):
     dndList = []
     print("has image 1")
     for rgb in range(3):
-        for i in range(255):
+        for i in range(256):
             listValue = getValue(listPixel, rgb, i)
             if (listValue != []):
                 dndList.append([rgb, i, listValue])
