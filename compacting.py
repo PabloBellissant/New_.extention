@@ -2,6 +2,8 @@
 
 
 def simpleValue(val1, val2):
+    if(str(val1).__contains__("-")):
+        return val2
     strVal1 = str(val1)
     strVal2 = str(val2)
     cutPlace = 0
@@ -26,4 +28,4 @@ def compacty(list):
     for i in range(len(newList)):
         list[i] = str(list[i])
         string = "/".join([str(x) for x in list])
-    return newList
+    return [string]
