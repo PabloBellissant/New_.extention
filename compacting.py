@@ -29,3 +29,26 @@ def compacty(list):
         list[i] = str(list[i])
         string = "/".join([str(x) for x in list])
     return [string]
+
+
+
+def ComplexValue(list):
+    for i in range(len(list)-1):
+        #tt refaire
+        print("")
+
+
+
+
+def unCompacty(str2list):
+    list = str2list.split("/")
+    list = ComplexValue(list)
+    return list
+
+
+
+#["3-1","4-4","11-1","14","15","16"]
+#['3-1/4-4/11-1/14/4/6']
+
+print(unCompacty("3-1/4-4/11-1/14/4/6"))
+

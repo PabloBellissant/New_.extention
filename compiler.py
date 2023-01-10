@@ -1,4 +1,4 @@
-from PIL.Image import *
+
 
 from findIndex import getValue
 from listSimplifier import simplify
@@ -6,13 +6,13 @@ from compacting import compacty
 
 
 
-def Imagecompiler(i):
-    (largeur, hauteur) = i.size
+def Imagecompiler(image):
+    (largeur, hauteur) = image.size
     listPixel = []
     print("launched")
     for y in range(hauteur):
         for x in range(largeur):
-            (rouge, vert, bleu) = i.getpixel((x, y))
+            (rouge, vert, bleu) = image.getpixel((x, y))
             listPixel.append([rouge, vert, bleu])
 
     dndList = []

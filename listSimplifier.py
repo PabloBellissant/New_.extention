@@ -25,3 +25,7 @@ def simplify(list):
         newList.append(strGroup)
         i+=1
     return newList
+
+
+# [0,1,4,5,6,7,8,11,12,14]
+# [0-1,4-4,11-1,14]
