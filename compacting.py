@@ -33,22 +33,37 @@ def compacty(list):
 
 
 def ComplexValue(list):
+
+    simpleList = []
+
+    for i in range(len(list)): # Get only first before "-"
+        val = list[i]
+        if(val.__contains__("-")): val = val[:val.find("-")]
+        simpleList.append(val)
     for i in range(len(list)-1):
-        #tt refaire
-        print("")
+        lenn = len(str(simpleList[i+1]))
+        while(int(simpleList[i])>=int(simpleList[i+1])):
+            add = 10**lenn
+            simpleList[i+1] = int(simpleList[i+1]) + add
+
+    for i in range(len(list)):
+        if(list[i].__contains__("-")): simpleList[i] = str(simpleList[i])+str(list[i][val.find("-")-1:])
+    return simpleList
+
+
+
 
 
 
 
 def unCompacty(str2list):
     list = str2list.split("/")
-    list = ComplexValue(list)
-    return list
+    return ComplexValue(list)
 
 
 
 #["3-1","4-4","11-1","14","15","16"]
-#['3-1/4-4/11-1/14/4/6']
+#['3-1/4-4/11-1/4/5/6']
 
-print(unCompacty("3-1/4-4/11-1/14/4/6"))
+print(unCompacty('10010/90'))
 
